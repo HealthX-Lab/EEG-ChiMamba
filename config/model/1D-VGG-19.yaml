@@ -1,0 +1,28 @@
+defaults:
+  - base_model
+  - 1D-VGG-Base
+  - _self_
+
+_target_: models.vgg_1d.VGG1D
+model_name: 1D-VGG-19
+model: 1D-VGG-19
+minibatch: 256 #64
+
+# Optimizer args
+base_lr: 0.000469
+weight_decay: 0.0706
+
+# Scheduler args
+scheduler: "cosine_decay_with_warmup_half"
+step_scheduler_batch: true
+warmup_t: 5
+
+warmup_lr_init: 0.00001
+min_lr: 0.00001
+t_initial: 50 
+decay_rate: 0.0
+warmup_prefix: true
+
+# Patience override
+epochs: 50
+patience: 10000

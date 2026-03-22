@@ -1,0 +1,11 @@
+defaults:
+  - data: caueeg-dementia-window
+  - train: base_train_window
+  - model: SSFormer
+  - _self_
+
+output_dir: ???
+
+hydra:
+  run:
+    dir: ./hydra/${now:%Y-%m-%d}/${now:%H-%M-%S}

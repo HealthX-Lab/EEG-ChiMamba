@@ -1,0 +1,5 @@
+defaults:
+  - base_caueeg_windowed
+  - _self_
+
+task: dementia

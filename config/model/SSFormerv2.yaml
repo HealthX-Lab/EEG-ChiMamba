@@ -1,0 +1,67 @@
+defaults:
+  - base_model
+  - _self_
+
+_target_: models.SSFormerv2.SSFormerv2
+model_name: SSFormerv2
+
+d_in: 1 
+use_age: 'no' 
+patch_dim: 32
+patch_size: 8
+patch_stride: 8
+use_alternative: false
+norm_type: layernorm
+norm_along_tokens: true
+
+
+
+
+
+cm_type: EinFFTInd 
+cattn_type: null 
+prenorm: true
+ds_ratio: 2
+ds_kernel_size: 1
+
+pool_type: mean
+embed_dims:
+ - 64
+ - 128
+depths:
+ - 1
+ - 1
+ - 1
+
+fc_layers: 2 
+
+fc_dropout: 0.3
+drop_path_rate: 0.05 # Drop path rate in Block
+dropout_1d_rate: 0.05 
+ssm_dropout: 0.2 # Regular dropout applied to ssm output 
+
+
+# Mamba params
+ssm_type: mamba 
+mamba_d_state: 16 
+
+
+# Training
+minibatch: 32
+
+# Optimizer args
+base_lr: 0.000469 
+weight_decay: 0.05 
+
+# Scheduler args
+scheduler: "cosine_decay_with_warmup_half" 
+step_scheduler_batch: true 
+warmup_t: 5 
+
+warmup_lr_init: 0.00001
+min_lr: 0.00001
+t_initial: 50 
+decay_rate: 0.0 
+warmup_prefix: true 
+epochs: 50
+patience: 10000000

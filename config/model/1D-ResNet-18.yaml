@@ -1,0 +1,29 @@
+defaults:
+  - base_model
+  - 1D-ResNet-Base
+  - _self_
+
+_target_: models.resnet_1d.ResNet1D
+model_name: 1D-ResNet-18
+conv_layers: [2, 2, 2, 2]
+block: basic
+minibatch: 512 
+
+# Optimizer args
+base_lr: 0.000469
+weight_decay: 0.0439
+
+# Scheduler args
+scheduler: "cosine_decay_with_warmup_half"
+step_scheduler_batch: true
+warmup_t: 5 
+
+warmup_lr_init: 0.00001
+min_lr: 0.00001
+t_initial: 50 
+decay_rate: 0.0
+warmup_prefix: true
+
+# Patience override
+epochs: 50
+patience: 10000

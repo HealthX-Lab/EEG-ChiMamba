@@ -1,0 +1,34 @@
+run_mode: train
+run_type: window 
+
+# reproducibility
+seed: 0
+
+# cuda
+use_cuda: true
+num_workers: 0 # Setting it to 0 is the default
+
+# Optional random cropping for train options
+train_random_crop: true
+signal_length_limit: 10000000
+return_timing: false
+samples_per_epoch: 100000 # Number of samples to train on for each epoch with random cropping
+iterations: ??? 
+
+find_lr: false
+
+# Other
+criterion: cross-entropy
+plot_lr: true # set to true to save a plot of the lrs to the output dir
+do_testing: true
+mixed_precision: true
+
+# To be filled in at runtime
+task_name: ???
+task_description: ???
+class_label_to_name: ???
+class_name_to_label: ???
+
+# Wandb
+use_wandb: true
+loss_log_interval: 10 # in batches

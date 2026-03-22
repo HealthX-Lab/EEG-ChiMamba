@@ -1,0 +1,7 @@
+_target_: ???
+in_channels: ???
+out_dims: ???
+epochs: 50
+patience: 20
+seq_length: ???
+grad_clip_norm: 0.0

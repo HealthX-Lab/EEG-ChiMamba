@@ -1,0 +1,29 @@
+base_name: base_caueeg_windowed
+dataset_type: window
+
+file_format: feather
+load_event: false
+num_electrodes: 21
+window_len_s: 10 # Sampling rate of 200Hz
+sampling_freq: 200
+window_percent_overlap: 0 # Represents percentage. Converted to float in script.
+latency: 2000
+input_norm: dataset # dataset, datapoint
+use_age: false
+EKG: X
+photic: X
+
+
+# augmentation
+awgn: 0.001
+awgn_age: 0.001
+mgn: 0.001
+
+file_marker_name: len_${.window_len_s}_ovl_${.window_percent_overlap}.json
+
+# To be filled out at runtime
+signal_header: ???
+signal_mean: ???
+signal_std: ???
+age_mean: null
+age_std: null
