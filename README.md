@@ -7,7 +7,7 @@ If you use EEG-SSFormer, please cite
 ```
    @article {Neves2026EEGSSFormer,
 	author = {Neves, Christopher and Steele, Christopher J and Xiao, Yiming},
-	title = {EEG-SSFormer: Towards a Robust Mamba-Based Architecture for Dementia Detection from Resting State Electroencephalography},
+	title = {EEG-ChiMamba: Towards a Robust Mamba-Based Architecture for Dementia Detection from Resting State Electroencephalography},
 	year = {2026},
 	doi = {10.64898/2026.03.23.713697},
 	journal = {bioRxiv}
@@ -63,13 +63,13 @@ pip install --upgrade numpy==1.26.4
 7. Clone the Dimentia Mamba repository
 
 ```
-git clone https://github.com/HealthX-Lab/EEG-DimentiaMamba-official.git
+git clone https://github.com/HealthX-Lab/EEG-ChiMamba.git
 ```
 
 8. cd into the repo
 
 ```
-cd EEG-DimentiaMamba
+cd EEG-ChiMamba
 ```
 
 9. Extract the dataset using 7z into the data/caueeg/caueeg-dataset subdirectory
