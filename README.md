@@ -2,10 +2,10 @@
 
 ## Citation
 
-If you use EEG-SSFormer, please cite
+If you use EEG-ChiMamba, please cite
 
 ```
-   @article {Neves2026EEGSSFormer,
+   @article {Neves2026ChiMamba,
 	author = {Neves, Christopher and Steele, Christopher J and Xiao, Yiming},
 	title = {EEG-ChiMamba: Towards a Robust Mamba-Based Architecture for Dementia Detection from Resting State Electroencephalography},
 	year = {2026},
