@@ -1,4 +1,4 @@
-# EEG-SSFormer
+# EEG-ChiMamba
 
 ## Citation
 
